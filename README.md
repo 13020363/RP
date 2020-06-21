@@ -1,6 +1,6 @@
-# New features 
- 1.The chatbot can answer some questions about the courses of master of FEIT:
-  What subjects does this course have?
+# New features #
+ 1.The chatbot can answer some questions about the courses of master of FEIT:#
+  What subjects does this course have?#
   How many credit points is in a course?
   The brief information of a course
  2.New functions:
