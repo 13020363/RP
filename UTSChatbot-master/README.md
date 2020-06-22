@@ -196,7 +196,7 @@ rasa run -m models/20190717-114901.tar.gz --endpoints endpoints.yml --credential
 This starts the well-trained chatbot stored under the "models" folder, and the webchat tool should be run fine. 
 
 
-#New features  
+# New features  
 1.Inserting courses of master of FEIT  
 2.New functions  
 The process of not existing courses  
