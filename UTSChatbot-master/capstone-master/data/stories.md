@@ -434,6 +434,21 @@
  - slot{"code":"12932","name":"Bachelor of Information Technology"}
  - action_years_entities
 
+## list_courses
+* greet
+ - utter_greet
+* what_can_you_do
+ - utter_what_can_you_do
+* list_courses{"master":"master"}
+ - slot{"master":"master"}
+ - action_list_courses
+* children{"name":"master of it"}
+ - slot{"code":"10148"}
+ - action_children
+ - slot{"code":"10148"}
+* goodbye
+ - utter_goodbye
+
 ## story_multiple_questions
 * greet
  - utter_greet

@@ -199,12 +199,12 @@
 - What is [Master of Science in Internetworking](name)
 - Do you know what [Master of Engineering](name) is
 - what is [master of it](name)
-- tell me about [Master of Science in Internetworking (Extension)](name)
+- tell me about [Master of Information Technology (Advanced)](name)
 - what is the subject [Master of Professional Engineering](name)
 - description for [Graduate Diploma in Engineering Management](name)
 - can you tell me about [Graduate Certificate in Engineering Studies](name)
 - i'd like to know about [Graduate Certificate in Engineering](name)
-- tell me [Master of Engineering Management Master of Business Administration](name)
+- tell me [Master of Information Technology (Extension)](name)
 - [stm90982](code)
 - [master it](name)
 - [master engineering](name)
@@ -212,7 +212,7 @@
 - tell me about [Core subjects (Data Analytics)](name)
 - show me [4G/5G Mobile Technologies](name)
 - show me [IT Graduate Project 24cp (Part 1 of 2) (2x12cp)](name)
-- what is the subject [Core subjects (Information Technology)](name)
+- what is the subject [Master of Information Technology (Extension)](name)
 - i'd like to know about [Work Integrated Learning](name)
 - i'd like to know about [.NET Application Development](name)
 
@@ -339,6 +339,13 @@
 - things you do
 - what are you
 - how do you help me
+
+## intent:list_courses
+- list [master](master) courses
+- what courses is in [master](master)?
+- what courses does [master](master) have?
+- show me [master](master) courses
+- tell me about [master](master) courses
 
 ## regex::code
 - [A-Z|a-z]{0,3}\d{5,6}

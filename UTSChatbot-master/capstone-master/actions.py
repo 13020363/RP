@@ -53,15 +53,18 @@ def init_code(dispatcher: CollectingDispatcher,
             value = tracker.get_slot('code')
 
         if not value:
-            print(d.courses())
-            dispatcher.utter_template('utter_fallback', tracker)
+            courses = d.courses()
+            dispatcher.utter_message('I cannot find this course, sorry. Our courses are listed below:')
+            for course in courses:
+                dispatcher.utter_message('{}'.format(course))
+#             dispatcher.utter_template('utter_fallback', tracker)
             return None
 
         if input_type == 'name':
             results = d.search(value)
             if len(results) == 0:
                 courses = d.courses()
-                dispatcher.utter_message('I cannot find {}, sorry. Our courses are listed below:'.format(value))
+                dispatcher.utter_message('I cannot find this course, sorry. Our courses are listed below:'.format(value))
                 for course in courses:
                     dispatcher.utter_message('{}'.format(course))
                 return None
@@ -80,10 +83,20 @@ def init_code(dispatcher: CollectingDispatcher,
                 result = d[value]
             except KeyError:
                 courses = d.courses()
-                dispatcher.utter_message('I cannot find {}, sorry. Our courses are listed below:'.format(value))
+                dispatcher.utter_message('I cannot find this course, sorry. Our courses are listed below:'.format(value))
                 for course in courses:
                     dispatcher.utter_message('{}'.format(course))
                 return None
+        elif input_type == 'master':
+            n = 0
+            courses = d.courses()
+            dispatcher.utter_message('Master courses are listed below:')
+            
+            while n < len(courses):
+                if n > 9:
+                    dispatcher.utter_message('{}'.format(courses[n]))
+                n += 1
+            return None
         else:
             dispatcher.utter_template('utter_fallback', tracker)
             return None
@@ -424,3 +437,27 @@ class ActionYearEntities(Action):
             dispatcher.utter_message(
                 '[{}]{} is not a course of {}'.format(result.code(), result.get_name(), class_name))
 
+
+class ActionListCourses(Action):
+    def name(self) -> Text:
+        return "action_list_courses"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        result = init_code(dispatcher, tracker, domain)
+
+        print("run ActionListCourses")
+#
+#        courses = d.courses()
+#        dispatcher.utter_message('Master courses are listed below:')
+#        print('courses:', courses[1])
+#        for course_name in courses:
+#            dispatcher.utter_message('{}'.format(course_name))
+#        while n < len(courses):
+#            if n >9:
+#                print(courses[n])
+#                dispatcher.utter_message('{}'.format(courses[n]))
+#
+#            n += 1

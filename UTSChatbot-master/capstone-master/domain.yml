@@ -10,6 +10,7 @@ actions:
 - action_duration
 - action_atar
 - action_fees
+- action_list_courses
 - utter_goodbye
 - utter_greet
 - utter_thanks
@@ -18,6 +19,7 @@ entities:
 - code
 - name
 - type
+- master
 intents:
 - years
 - years_entities
@@ -33,6 +35,7 @@ intents:
 - duration
 - credit_points
 - what_can_you_do
+- list_courses
 - prof_prac
 - fees
 - atar
