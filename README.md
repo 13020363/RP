@@ -6,4 +6,5 @@
  2.New functions:<br/>
  The process of not existing courses<br/>
  The process of improving the sensitivity of Master courses<br/>
- The process of extending the duration of a conversation<br/>
+ The process of extending the duration of a conversation  
+ The function of listing master courses
